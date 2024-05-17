@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./resources/styles.css">
+  <title>Veterinaria</title>
+</head>
+<body>
+  <div class="button-container">
+    <button onclick="setLightMode()">Modo Claro</button>
+    <button onclick="setDarkMode()">Modo Oscuro</button>
+  </div>
+  <div class="form-container">
+    <h1>Formulario de Cita Veterinaria</h1>
+    <form action="/" method="POST">
+        <div class="form-group">
+            <label for="owner-name">Nombre del Propietario:</label>
+            <input type="text" id="owner-name" name="owner-name" required>
+        </div>
+        <div class="form-group">
+            <label for="pet-name">Nombre del Animal:</label>
+            <input type="text" id="pet-name" name="pet-name" required>
+        </div>
+        <div class="form-group">
+            <label for="pet-type">Tipo de Animal:</label>
+            <select id="pet-type" name="pet-type" required>
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="appointment-date">Fecha de la Cita:</label>
+            <input type="date" id="appointment-date" name="appointment-date" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Descripción del Problema:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+  </div>
+
+  <script src="./resources/script.js"></script>
+</body>
+</html>
